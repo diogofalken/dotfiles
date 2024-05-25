@@ -39,3 +39,12 @@ vim.keymap.set("n", "<C-w>L", "<cmd>vertical resize -2<cr>", { desc = "Decrease 
 vim.keymap.set("n", "<C-w>H", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 vim.wo.number = true
+
+-- AutoCommands
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("config-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
