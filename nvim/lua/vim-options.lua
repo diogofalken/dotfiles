@@ -14,6 +14,7 @@ vim.o.breakindent = true -- Enable smart indenting
 vim.o.termguicolors = true
 vim.o.splitright = true -- split vertical window to the right
 vim.o.splitbelow = true -- split horizontal window to the bottom
+vim.o.colorcolumn = "120" -- Vertical line
 
 vim.o.scrolloff = 8 -- Always keep 8 lines above/bellow cursor
 vim.o.signcolumn = "yes" -- Show the sign column

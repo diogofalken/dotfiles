@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "html", "cssls", "gopls" },
+				ensure_installed = { "lua_ls", "ts_ls", "html", "cssls" },
 			})
 		end,
 	},
@@ -27,12 +27,11 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.html.setup({ capabilities = capabilities })
-			lspconfig.gopls.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
-			lspconfig.tsserver.setup({ capabilities = capabilities })
+			lspconfig.ts_ls.setup({ capabilities = capabilities })
 
 			-- https://github.com/neovim/nvim-lspconfig/issues/1155#issuecomment-1205680003
-			local languageServerPath = "/Users/diogo.costa/.nvm/versions/node/v18.19.0/lib/node_modules"
+			local languageServerPath = "/Users/diogo.costa/.nvm/versions/node/v18.20.3/lib/node_modules"
 			local cmd = {
 				"ngserver",
 				"--stdio",
