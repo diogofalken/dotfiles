@@ -1,0 +1,15 @@
+iterm2
+raycast
+bruno
+tmux
+spectacle
+fzf
+neovim
+ripgrep
+tmux
+font-monaspace
+nvm
+azure-data-studio
+logi-options-plus
+obsidian
+aerospace
